@@ -11,10 +11,9 @@
             return self;
         }
         const new_string = helper(self);
-        console.log(self, this, new_string);
         const promise = function () {
             return new Promise(function (resolve, reject) {
-                if (new_string === self) {
+                if (new_string.trim() === self.trim()) {
                     reject(self);
                 }
                 else
@@ -26,8 +25,10 @@
             .catch((i) => { console.log('no word is filtered: ', i); });
     };
     String.prototype.filterWords = filteredWords;
-    let test = "This house is nice";
-    let bannedWords = ["house1", "nice1"];
+    const test = "This house is nice";
+    const bannedWords = ["house", "nice"];
     console.log(test.filterWords(bannedWords));
-    console.log(test === 'This house is nice');
+    const bannedWords1 = ["house1", "nice1"];
+    console.log(test.filterWords(bannedWords1));
+
 })()
