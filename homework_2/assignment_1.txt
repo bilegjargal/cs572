@@ -1,0 +1,5 @@
+1. setImmediate works on the check Queue. Hence that works after 
+the setTimeOut tasks.
+2. process.nextTick works on priority queue. That means process.nextTick
+works before main Queue tasks starts working.
+3.http, https, crypto, fs, path, url, stream, os, util, v8
