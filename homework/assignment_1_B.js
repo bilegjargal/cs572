@@ -13,8 +13,8 @@
         const new_string = helper(self);
         const promise = function () {
             return new Promise(function (resolve, reject) {
-                if (new_string.trim() === self.trim()) {
-                    reject(self);
+                if (new_string === self.toString()) {
+                    reject(self.toString());
                 }
                 else
                     resolve(new_string);
