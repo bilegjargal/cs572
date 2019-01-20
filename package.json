@@ -1,0 +1,29 @@
+{
+  "name": "cs572",
+  "version": "1.0.0",
+  "description": "Modern Web Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bilegjargall/CS572.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bilegjargall/CS572/issues"
+  },
+  "homepage": "https://github.com/bilegjargall/CS572#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "check": "^1.0.0",
+    "cors": "^2.8.5",
+    "dns": "^0.2.2",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.1",
+    "morgan": "^1.9.1"
+  }
+}
