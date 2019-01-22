@@ -14,7 +14,8 @@ router.get("/", (req, res) => {
     const decipher = crypto.createDecipher("aes256", "asaadsaad");
     const decrypted =
       decipher.update(doc.message, "hex", "utf8") + decipher.final("utf8");
-    if (decrypted) res.write(decrypted);
+    res.write(decrypted);
+    res.end();
   });
 });
 
