@@ -44,3 +44,41 @@ db.restaurant.find({$or: [{district: "Bronx"}, {district: "Brooklyn"}, {district
 
 # 15
 db.restaurant.find({$or: [{district: "Bronx"}, {district: "Brooklyn"}, {district: "Staten Island"}]}, {_id:0, name: 1, district: 1, cuisine: 1, restaurant_id: 1})
+
+# 16
+db.restaurant.find({"grades": {$elemMatch: {"score": {$lt:10}}}}, {_id:0, name: 1, district: 1, cuisine: 1, restaurant_id: 1})
+
+# 17
+db.restaurant.find({"address.coord.1": {$gte: 42, $lt:52}}, {_id:0, restaurant_id: 1, name: 1, address: 1})
+
+#18
+db.restaurant.find({},{}).sort({name: 1});
+
+#19
+db.restaurant.find({},{}).sort({name: -1});
+
+#20
+db.restaurant.find({},{}).sort({cuisine: 1, district: -1});
+
+#21
+db.restaurant.find({"address.street":{$eq: ""}}, {_id:0, restaurant_id: 1, name: 1, address: 1})
+
+#22
+db.restaurant.find({"address.coord.0": {$type: "double"}},{}).sort({cuisine: 1, district: -1});
+
+#23
+db.restaurant.aggregate(
+  [
+    {$match:
+      {name: /^Mad/}
+    },
+    {$project: 
+      {
+        _id: 0,
+        name: 1,
+        district: 1,
+        lat: {$arrayElemAt: ["$address.coord",0]}, 
+        long: {$arrayElemAt: ["$address.coord", 1]}
+      }
+    }
+  ])
