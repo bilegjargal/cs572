@@ -11,4 +11,4 @@ app.listen(4000, () => {
 });
 
 app.use("/insert", require("./routes/insert"));
-app.use("/find", require("./routes/insert"));
+app.use("/find", require("./routes/find"));
