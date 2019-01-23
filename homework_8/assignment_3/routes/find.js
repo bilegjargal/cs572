@@ -18,17 +18,16 @@ router.get("/", (req, res) => {
               parseFloat(params.query.lat)
             ]
           },
-          $maxDistance: 5000,
-          $minDistance: 1000
+          $maxDistance: 2000
         }
       }
     })
     .limit(3)
     .toArray(function(err, document) {
+      console.log(document);
       if (err) throw err;
       res.status(200).json(document);
     });
-  res.end();
 });
 
 module.exports = router;
