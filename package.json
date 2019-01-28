@@ -25,6 +25,8 @@
     "express": "^4.16.4",
     "express-validator": "^5.3.1",
     "mongodb": "^3.1.12",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
   }
 }
