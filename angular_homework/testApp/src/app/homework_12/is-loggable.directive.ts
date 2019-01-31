@@ -2,7 +2,7 @@ import { Directive, Input, HostListener } from "@angular/core";
 import { element } from "@angular/core/src/render3";
 
 @Directive({
-  selector: "[appIsLoggable]"
+  selector: "[isLoggable]"
 })
 export class IsLoggableDirective {
   @Input() isLoggable = "false";
@@ -13,5 +13,5 @@ export class IsLoggableDirective {
     }
     return false;
   }
-  constructor() {}
+  constructor() { }
 }
