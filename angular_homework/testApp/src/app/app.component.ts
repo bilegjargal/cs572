@@ -10,8 +10,11 @@ import { Component } from "@angular/core";
   //BEGIN hw 11
   // template:
   //   "<app-counter [counter] = 'counter' (counterChanged)='onCounterChanged($event)'> </app-counter>",
-  //END hw 12
+  //END hw 11
+
+  //BEGIN hw 12
   template: '<app-smart [itemList]="itemList"></app-smart>',
+  //END hw 12
 
   styleUrls: ["./app.component.css"]
 })
