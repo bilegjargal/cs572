@@ -3,7 +3,11 @@ import { Component, OnInit, Input } from "@angular/core";
 @Component({
   selector: "app-smart",
   template: `
-    <app-dumb [itemList]="itemList"></app-dumb>
+    <app-dumb
+      appIsVisible="true"
+      appIsLoggable="true"
+      [itemList]="itemList"
+    ></app-dumb>
   `,
   styles: []
 })
