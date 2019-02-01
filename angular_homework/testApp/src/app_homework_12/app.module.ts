@@ -8,7 +8,6 @@ import { SmartComponent } from "../app_homework_12/smart.component";
 import { DumbComponent } from "../app_homework_12/dumb.component";
 import { IsVisibleDirective } from "../app_homework_12/is-visible.directive";
 import { IsLoggableDirective } from "../app_homework_12/is-loggable.directive";
-import { UsersModule } from '../users/users.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { UsersModule } from '../users/users.module';
     DumbComponent,
     IsVisibleDirective,
     IsLoggableDirective,
-    UsersModule
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
