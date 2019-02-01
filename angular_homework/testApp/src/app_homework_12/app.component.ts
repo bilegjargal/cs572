@@ -7,9 +7,10 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-root",
-  template: `Hello its working`,
+  template: '<app-smart [itemList]="itemList"></app-smart>',
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
+  itemList = ["one", "two", "three", "four", "five"];
 
 }
