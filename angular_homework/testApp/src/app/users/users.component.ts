@@ -6,7 +6,9 @@ import { DataService } from "../service/data.service";
   template: `
     <ul>
       <li *ngFor="let user of userData">
-        <a [routerLink]="['users', user.login.uuid]">{{ user.name.first }}</a>
+        <a [routerLink]="[user.login.uuid]"
+          >{{ user.name.first }} {{ user.name.last }}</a
+        >
       </li>
     </ul>
   `,

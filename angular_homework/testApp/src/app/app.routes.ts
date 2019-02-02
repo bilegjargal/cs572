@@ -4,8 +4,10 @@ import { UserdetailsComponent } from "./users/userdetails.component";
 
 const routes: Routes = [
   { path: "users", component: UsersComponent },
-  { path: "users/:uuid", component: UserdetailsComponent },
-  { path: "**", redirectTo: "/" }
+  {
+    path: "users/:id",
+    component: UserdetailsComponent
+  }
 ];
 
-export const myRoutes = RouterModule.forRoot(routes);
+export const myRoutes = RouterModule.forChild(routes);

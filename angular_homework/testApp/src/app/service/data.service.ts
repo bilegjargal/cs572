@@ -22,7 +22,17 @@ export class DataService {
     }
   }
 
-  getUserDetail() {
-    console.log(this.userCachedData);
+  getUserDetail(uuid) {
+    let userDataStr = localStorage.getItem("userdata");
+    let userData;
+    if (userDataStr != null) {
+      userData = JSON.parse(userDataStr);
+      for (let user of userData) {
+        if (user.login.uuid == uuid) {
+          return user;
+        }
+      }
+    }
+    return null;
   }
 }
