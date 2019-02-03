@@ -9,7 +9,6 @@ import { JsonPipe } from "@angular/common";
     <h4>
       User details
     </h4>
-    <p>{{ userDetail }}</p>
   `,
   styles: []
 })
@@ -18,6 +17,7 @@ export class UserdetailsComponent implements OnInit {
   constructor(private data: DataService, route: ActivatedRoute) {
     route.params.subscribe(param => {
       this.userDetail = JSON.stringify(data.getUserDetail(param.id));
+      console.log(this.userDetail);
     });
   }
 
